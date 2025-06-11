@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: k2p_immortalwrt_23.05
+name: k2p_immortalwrt_24.10
 
 on:
   repository_dispatch:
@@ -32,11 +32,11 @@ on:
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-23.05
+  REPO_BRANCH: openwrt-24.10
   FEEDS_CONF: feeds.conf.default
   # CONFIG_FILE: k2p_23.05_basic.config
   # CONFIG_FILE: k2p_23.05_ikoolproxy.config
-  CONFIG_FILE: k2p_23.05_adblock.config
+  CONFIG_FILE: k2p_24.10_adblock.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -45,7 +45,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  OPENWRT_TAG: k2p_23.05
+  OPENWRT_TAG: k2p_24.10
 jobs:
   build:
     runs-on: ubuntu-22.04
